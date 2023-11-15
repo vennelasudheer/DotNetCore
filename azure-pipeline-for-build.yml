@@ -8,7 +8,7 @@ variables:
 
 
 pool:
- vmimage: windows-latest 
+ vmimage:
 
 steps:
 - task: DotNetCoreCLI@2
@@ -30,4 +30,4 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
-    publishLocation: 'Container'
+    publishLocation: 'FilePath'
